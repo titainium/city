@@ -1,0 +1,101 @@
+#logo {
+	padding-left: 1px;
+}
+#search-addon {
+	background-color: rgb(133, 163, 255);
+}
+
+#search-input {
+	background-color: rgb(189, 189, 189);
+}
+
+#main-menu {
+	background-color: rgb(0, 84, 168);
+	margin-top: 15px;
+}
+
+#menu-items li a {
+	color: #FFFFFF;
+}
+
+#main-menu li a:hover {
+	background-color: rgb(207, 207, 207);
+	color: rgb(0, 84, 164);
+}
+
+#extra-menu {
+	background-color: rgb(255, 130, 5);
+}
+
+#extra-menu li a {
+	color: #FFFFFF;
+}
+
+#extra-menu li ul li a {
+	color: rgb(0, 84, 164);
+}
+
+.sub-menu {
+	background-color: rgb(237, 237, 237);
+	display: none;
+}
+
+#product-info {
+	padding-left: 0;
+}
+
+#product-function {
+	border: #CCCCCC solid thin;
+	margin-top: 15px;
+}
+
+#product-btn-group {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#extra-btn-group {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+#product-details {
+	margin-top: 15px;
+	margin-left: 8px;
+	margin-right: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.items {
+	margin-bottom: 10px;
+	margin-right: 7%;
+}
+
+#design-center, .center-links, #side-navigation {
+	border: #CCCCCC solid thin;
+	margin-bottom: 5px;
+}
+
+.navigation-items {
+	margin-left: 5px;
+	margin-bottom: 5px;
+	padding: 0 15px;
+}
+
+.keyword-label {
+	margin-left: -75px;
+	margin-right: 0;
+	padding-right: 0;
+	text-align: right;
+}
+
+.keywords {
+	margin-left: -15px;
+	padding-left: 0;
+}
+
+.keyword-input {
+	width: 500px;
+}

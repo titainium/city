@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>City Design Center</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/justified-nav.css">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="css/custom/product.css">
+</head>
+<body>
+	<!-- Header section -->
+	<div class="container">
+		<img class="pull-left" id="logo" src="img/logo.jpg" />
+		<div class="col-sm-1"></div>
+		<div class="input-group col-sm-4">
+			<input type="text" id="search-input" disabled="disabled" class="form-control">
+			<span id="search-addon" class="input-group-addon">跨库搜索</span>
+		</div>
+	</div>
+	
+	<!-- Menu section -->
+	<div class="container">
+		<nav class="navbar navbar-default" role="navigation" id="main-menu">
+			<div class="navbar-collapse collapse">
+          		<ul class="nav navbar-nav" id="menu-items">
+            		<li id="active-main" class="active"><a href="#" id="menu-item-admin">行政区</a></li>
+            		<li><a href="#" id="menu-item-functions">功能区</a></li>
+            		<li><a href="#" id="menu-item-projects">项目</a></li>
+            		<li><a href="#" id="menu-item-building">建筑</a></li>
+            		<li><a href="#" id="menu-item-internalview">内部景观</a></li>
+            		<li><a href="#" id="menu-item-builddetail">建筑细节</a></li>
+            		<li><a href="#" id="menu-item-total">总图库</a></li>
+            		<li><a href="#" id="menu-item-material">素材库</a></li>
+            		<li><a href="#" id="menu-item-knowledge">知识库</a></li>
+          		</ul>
+          		<ul class="nav navbar-nav navbar-right" id="extra-menu">
+          			<li><a href="#">登录</a></li>
+          			<li><a href="#">注册</a></li>
+          			<li class="dropdown">
+            			<a href="#" class="dropdown-toggle" data-toggle="dropdown">我的案例</a>
+            			<ul class="dropdown-menu">
+              				<li><a href="#">城市</a></li>
+              				<li><a href="#">Another action</a></li>
+              				<li><a href="#">Something else here</a></li>
+              				<li class="divider"></li>
+              				<li><a href="#">Separated link</a></li>
+            			</ul>
+          			</li>
+          			<li><a href="#">退出</a></li>
+        		</ul>
+        	</div>
+        	<div class="navbar-collapse sub-menu" id="sub-menu-admin">
+				<ul class="nav navbar-nav">
+					<li><a href="#">城市</a></li>
+					<li id="active-sub" class="active"><a href="#">新区</a></li>
+					<li><a href="#">开发区</a></li>
+					<li><a href="#">县城</a></li>
+					<li><a href="#">城镇</a></li>
+					<li><a href="#">村落</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-functions">
+				<ul class="nav navbar-nav">
+					<li><a href="#">商业办公</a></li>
+					<li><a href="#">居住片区</a></li>
+					<li><a href="#">公建片区</a></li>
+					<li><a href="#">产业片区</a></li>
+					<li><a href="#">交通枢纽片区</a></li>
+					<li><a href="#">面状大型空间</a></li>
+					<li><a href="#">带状大型空间</a></li>
+					<li><a href="#">历史和旅游区</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-projects">
+				<ul class="nav navbar-nav">
+					<li><a href="#">居住</a></li>
+					<li><a href="#">商业办公</a></li>
+					<li><a href="#">公建</a></li>
+					<li><a href="#">产业</a></li>
+					<li><a href="#">旅游</a></li>
+					<li><a href="#">公园</a></li>
+					<li><a href="#">广场</a></li>
+					<li><a href="#">带状景观</a></li>
+					<li><a href="#">交通设施</a></li>
+					<li><a href="#">市政设施</a></li>
+					<li><a href="#">街道</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-building">
+				<ul class="nav navbar-nav">
+					<li><a href="#">住宅</a></li>
+					<li><a href="#">商业</a></li>
+					<li><a href="#">办公</a></li>
+					<li><a href="#">产业</a></li>
+					<li><a href="#">交通</a></li>
+					<li><a href="#">市政</a></li>
+					<li><a href="#">历史</a></li>
+					<li><a href="#">教育</a></li>
+					<li><a href="#">旅游</a></li>
+					<li><a href="#">行政</a></li>
+					<li><a href="#">体育</a></li>
+					<li><a href="#">医疗</a></li>
+					<li><a href="#">文化</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-internalview">
+				<ul class="nav navbar-nav">
+					<li><a href="#">内部道路</a></li>
+					<li><a href="#">绿地景观</a></li>
+					<li><a href="#">广场景观</a></li>
+					<li><a href="#">带状景观</a></li>
+					<li><a href="#">桥梁</a></li>
+					<li><a href="#">立交和涵洞</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-builddetail">
+				<ul class="nav navbar-nav">
+					<li><a href="#">建筑构建</a></li>
+					<li><a href="#">景观性构建</a></li>
+					<li><a href="#">建筑性构筑</a></li>
+					<li><a href="#">服务性景观和小品</a></li>
+					<li><a href="#">水景和绿化</a></li>
+					<li><a href="#">夜景和照明</a></li>
+					<li><a href="#">广告标识</a></li>
+					<li><a href="#">街道家具</a></li>
+					<li><a href="#">道路绿化和铺装</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-total">
+				<ul class="nav navbar-nav">
+					<li><a href="#">新区级别</a></li>
+					<li><a href="#">功能片区</a></li>
+					<li><a href="#">项目总图</a></li>
+					<li><a href="#">建筑平面</a></li>
+					<li><a href="#">居住片区</a></li>
+					<li><a href="#">居住区</a></li>
+					<li><a href="#">居住区景观</a></li>
+					<li><a href="#">滨水项目和景观</a></li>
+					<li><a href="#">滨水道路</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-material">
+				<ul class="nav navbar-nav">
+					<li><a href="#">建筑风貌</a></li>
+					<li><a href="#">住宅房型</a></li>
+					<li><a href="#">SU模型</a></li>
+					<li><a href="#">效果图</a></li>
+					<li><a href="#">意向图片</a></li>
+					<li><a href="#">生态措施</a></li>
+					<li><a href="#">空间体量</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+			<div class="navbar-collapse sub-menu" id="sub-menu-knowledge">
+				<ul class="nav navbar-nav">
+					<li><a href="#">文本库</a></li>
+					<li><a href="#">书籍库</a></li>
+					<li><a href="#">杂志库</a></li>
+					<li><a href="#">奖项库</a></li>
+					<li><a href="#">视频库</a></li>
+					<li><a href="#">规范库</a></li>
+					<li><a href="#">文本要素</a></li>
+					<li><a href="#">知识点收集</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+          			<li><a href="#">在线提交案例</a></li>
+        		</ul>
+			</div>
+        </nav>
+	</div>
+	
+	<!-- Main section -->
+	<div class="container">
+		<div class="row">
+			<!-- main area -->
+			<div class="col-sm-9">
+				<div class="col-sm-12" id="product-info">
+        			<img class="pull-left col-sm-3" id="logo" src="img/products-1.jpg" />
+        			<div class="col-sm-8">
+        				<h4>万科四季花城</h4>
+        				<p>项目总结：全国最大的城市内公园</p>
+        				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three 
+                       supporting pieces of content. Use it as a starting point to create something more unique.
+                    	</p>
+        			</div>
+      			</div>
+      			
+      			<div class="col-sm-12" id="product-function">
+      				<div class="col-sm-6 pull-left" id="product-btn-group">
+      					<button class="btn btn-default">下载</button>
+      					<button class="btn btn-default">点赞</button>
+      					<button class="btn btn-default">分享</button>
+      					<button class="btn btn-default">收藏</button>
+      				</div>
+      				<div class="pull-right" id="extra-btn-group">
+      					<button class="btn btn-default">查看表单</button>
+      					<button class="btn btn-default">上传图片</button>
+      					<button class="btn btn-default">打包下载</button>
+      				</div>
+      			</div>
+      			
+      			<div class="col-sm-12" id="product-details">
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      					<a class="item" href="img/prd-detail-1.jpg" title="居住区">
+      					  <img src="img/prd-detail-1.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-2.jpg" title="居住区">
+      					<img src="img/prd-detail-2.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-3.jpg" title="居住区">
+      					<img src="img/prd-detail-3.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-4.jpg" title="居住区">
+      					<img src="img/prd-detail-4.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-5.jpg" title="居住区">
+      					<img src="img/prd-detail-5.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-6.jpg" title="居住区">
+      					<img src="img/prd-detail-6.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-7.jpg" title="居住区">
+      					<img src="img/prd-detail-7.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-8.jpg" title="居住区">
+      					<img src="img/prd-detail-8.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-9.jpg" title="居住区">
+      					<img src="img/prd-detail-9.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-10.jpg" title="居住区">
+      					<img src="img/prd-detail-10.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-11.jpg" title="居住区">
+      					<img src="img/prd-detail-11.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      				<div class="items">
+      				  <table>
+      				  <tr>
+      				  <td>
+      				  <a class="item" href="img/prd-detail-12.jpg" title="居住区">
+      					<img src="img/prd-detail-12.jpg" />
+      					</a>
+      					</td>
+      					</tr>
+      					<tr>
+      					<td>
+      					<span>文件编码</span>
+      					</td>
+      					</tr>
+      					</table>
+      				</div>
+      			</div>
+      			
+      			<div class="col-sm-12" id="aerial-photo">
+      				<h4>航拍显示</h4>
+      				<div id="aerial-photo-carousel" class="carousel slide" data-ride="carousel">
+      					<div class="carousel-inner">
+        					<div class="item active">
+          						<img src="img/aerial-photo.jpg" alt="First slide" />
+        					</div>
+        				</div>
+        			</div>
+      			</div>
+      			
+      			<div class="col-sm-12" id="bbs">
+      				<h4>讨论</h4>
+      				<form action="/" method="POST">
+      					<textarea class="form-control" rows="6"></textarea>
+      				</form>
+      			</div>
+        	</div>
+        	
+        	<!-- side area -->
+        	<div class="col-sm-3">
+        		<div class="sidebar-module sidebar-module-inset col-sm-12" id="design-center">
+            		<h4 class="pull-right">云端城市规划中心</h4>
+            		<div class="col-sm-12 center-links">
+            			<span class="pull-left">GDCO</span>
+            			<span class="col-sm-1"></span>
+            			<span class="pull-right">全球设计案例在线</span>
+            		</div>
+            		<div class="col-sm-12 center-links">
+            			<span class="pull-left">UPKG</span>
+            			<span class="col-sm-1"></span>
+            			<span class="pull-right">城市规划知识图谱</span>
+            		</div>
+            		<div class="col-sm-12 center-links">
+            			<span class="pull-left">UPEO</span>
+            			<span class="col-sm-1"></span>
+            			<span class="pull-right">城市规划在线教育</span>
+            		</div>
+            		<div class="col-sm-12 center-links">
+            			<span class="pull-left">UPDL</span>
+            			<span class="col-sm-1"></span>
+            			<span class="pull-right">城市规划设计素材</span>
+            		</div>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>快速导航</h4>
+          			<table class="navigation-items">
+          			<tr>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-1.jpg" alt="居住区" />
+          				<span>居住区</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-2.jpg" alt="商业地产" />
+          				<span>商业地产</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-3.jpg" alt="规划总图" />
+          				<span>规划总图</span>
+          			</div>
+          			</td>
+          			<tr>
+          			<td>
+          			<div>
+	          			<img src="img/navigation-4.jpg" alt="文本库" />
+	          			<span>文本库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-5.jpg" alt="法规库" />
+	          			<span>法规库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-6.jpg" alt="建筑" />
+	          			<span>建筑</span>
+	          		</div>
+	          		</td>
+	          		</tr>
+	          		</table>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="file-upload">
+          			<h4 class="pull-left">文件资料</h4>
+          			<h4 class="pull-right">上传资料</h4>
+          			<table>
+          				<tr>
+          					<td>
+          					  <img src="img/ppt.png" alt="PPT" class="pull-left file-format" />
+          					  &nbsp;&nbsp;
+          					  </td>
+          					<td>
+          						<table>
+          							<tr><span>文件名称</span></tr>
+          							<tr>
+          								<td class="file-info">9.0M</td>
+          								<td class="file-info">在线查看</td>
+          								<td class="file-info">下载</td>
+          							</tr>
+          						</table>
+          					</td>
+          				</tr>
+          				<tr>
+          					<td>
+          					  <img src="img/doc.png" alt="WORD" class="pull-left file-format" />
+          					  &nbsp;&nbsp;
+          					</td>
+          					<td>
+          						<table>
+          							<tr><span>文件名称</span></tr>
+          							<tr>
+          								<td class="file-info">9.0M</td>
+          								<td class="file-info">在线查看</td>
+          								<td class="file-info">下载</td>
+          							</tr>
+          						</table>
+          					</td>
+          				</tr>
+          				<tr>
+          					<td>
+          					  <img src="img/excel.png" alt="EXCEL" class="pull-left file-format" />
+          					  &nbsp;&nbsp;
+          					</td>
+          					<td>
+          						<table>
+          							<tr><span>文件名称</span></tr>
+          							<tr>
+          								<td class="file-info">9.0M</td>
+          								<td class="file-info">在线查看</td>
+          								<td class="file-info">下载</td>
+          							</tr>
+          						</table>
+          					</td>
+          				</tr>
+          				<tr>
+          					<td>
+          					  <img src="img/pdf.png" alt="PDF" class="pull-left file-format" />
+          					  &nbsp;&nbsp;
+          					</td>
+          					<td>
+          						<table>
+          							<tr><span>文件名称</span></tr>
+          							<tr>
+          								<td class="file-info">9.0M</td>
+          								<td class="file-info">在线查看</td>
+          								<td class="file-info">下载</td>
+          							</tr>
+          						</table>
+          					</td>
+          				</tr>
+          			</table>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>案例暂存</h4>
+          			<table class="navigation-items">
+          			<tr>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-1.jpg" alt="居住区" />
+          				<span>居住区</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-2.jpg" alt="商业地产" />
+          				<span>商业地产</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-3.jpg" alt="规划总图" />
+          				<span>规划总图</span>
+          			</div>
+          			</td>
+          			<tr>
+          			<td>
+          			<div>
+	          			<img src="img/navigation-4.jpg" alt="文本库" />
+	          			<span>文本库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-5.jpg" alt="法规库" />
+	          			<span>法规库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-6.jpg" alt="建筑" />
+	          			<span>建筑</span>
+	          		</div>
+	          		</td>
+	          		</tr>
+	          		</table>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>案例推荐</h4>
+          			<table class="navigation-items">
+          			<tr>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-1.jpg" alt="居住区" />
+          				<span>居住区</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-2.jpg" alt="商业地产" />
+          				<span>商业地产</span>
+          			</div>
+          			</td>
+          			<td>&nbsp;</td>
+          			<td>
+          			<div>
+          				<img class="navigation-item" src="img/navigation-3.jpg" alt="规划总图" />
+          				<span>规划总图</span>
+          			</div>
+          			</td>
+          			<tr>
+          			<td>
+          			<div>
+	          			<img src="img/navigation-4.jpg" alt="文本库" />
+	          			<span>文本库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-5.jpg" alt="法规库" />
+	          			<span>法规库</span>
+	          		</div>
+	          		</td>
+	          		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	          		<td>
+	          		<div>
+	          			<img class="navigation-item" src="img/navigation-6.jpg" alt="建筑" />
+	          			<span>建筑</span>
+	          		</div>
+	          		</td>
+	          		</tr>
+	          		</table>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>广告位</h4>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>广告位</h4>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>广告位</h4>
+          		</div>
+          		
+          		<div class="sidebar-module col-sm-12" id="side-navigation">
+          			<h4>广告位</h4>
+          		</div>
+          	</div>
+        </div>
+    </div>
+
+	<!-- Foot section -->
+	<div class="container">
+		<div class="footer">
+			<ol class="breadcrumb">
+            	<li><a href="#" id="menu-item-city">隐私条款</a></li>
+            	<li><a href="#" id="menu-item-functions">使用帮助</a></li>
+           		<li><a href="#" id="menu-item-projects">用户反馈</a></li>
+           		<li><a href="#" id="menu-item-building">加入我们</a></li>
+           		<li><a href="#" id="menu-item-internalview">友情链接</a></li>
+           		<li><a href="#" id="menu-item-builddetail">Site Map</a></li>  
+          	</ol>
+          	<ul class="nav navbar-nav" id="copyright">
+          		<li>上海云端城市规划设计中心</li>
+          		<li class="col-sm-1"></li>
+          		<li>京ICP备XXX号</li>
+        	</ul>
+		</div>
+	</div>
+
+	<!-- js files -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="js/custom/product.js"></script>
+</body>
+</html>

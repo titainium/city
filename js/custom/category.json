@@ -1,0 +1,642 @@
+{
+    "_id": {
+        "$oid": "537e1f4241a302066b91a7b3"
+    }, 
+    "name": "居住区", 
+    "rangeLabelLst": [
+        {
+            "_id": {
+                "$oid": "537e310b41a302091be63626"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 0, 
+            "minV": 0, 
+            "name": "B11-经纬度", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5374f26b41a30211bb1d36c6"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 100, 
+            "minV": 0, 
+            "name": "B12-规模等级", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e1f4241a302066b91a7b5"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 1000000000, 
+            "minV": 0, 
+            "name": "B11-规模", 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac67"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-0-1", 
+                    "sname": "0-1"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac68"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-1-5", 
+                    "sname": "1-5"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac69"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-5-10", 
+                    "sname": "5-10"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac6a"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-10-20", 
+                    "sname": "10-20"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac6b"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-20-50", 
+                    "sname": "20-50"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5374f36841a30211cdadac6c"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B13-50-inf", 
+                    "sname": "大于50"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e1f4241a302066b91a7b6"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 10000000000, 
+            "minV": 0, 
+            "name": "B12-建筑面积", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377121841a3020795c91b34"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 10000, 
+            "minV": 0, 
+            "name": "B21-容积率", 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b2c"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-0-0.6", 
+                    "sname": "0-0.6"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b2d"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-0.6-1.0", 
+                    "sname": "0.6-1.0"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b2e"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-1.0-1.5", 
+                    "sname": "1.0-1.5"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b2f"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-1.5-2.0", 
+                    "sname": "1.5-2.0"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b30"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-2.0-2.5", 
+                    "sname": "2.0-2.5"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b31"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-2.5-3.0", 
+                    "sname": "2.5-3.0"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b32"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-3.0-4.0", 
+                    "sname": "3.0-4.0"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377121841a3020795c91b33"
+                    }, 
+                    "l_type": "range", 
+                    "name": "B21-4.0-inf", 
+                    "sname": "大于4.0"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377121841a3020795c91b35"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 10000000000, 
+            "minV": 0, 
+            "name": "B22-户数", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377121841a3020795c91b36"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 10000000000, 
+            "minV": 0, 
+            "name": "B31-均价", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377121841a3020795c91b37"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 10000000000, 
+            "minV": 0, 
+            "name": "B32-投资", 
+            "tagLst": [ ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377121841a3020795c91b38"
+            }, 
+            "fmt": "%s", 
+            "l_type": "range", 
+            "maxV": 2100, 
+            "minV": 1900, 
+            "name": "B41-开盘时间", 
+            "tagLst": [ ]
+        }
+    ], 
+    "selectLabelLst": [
+        {
+            "_id": {
+                "$oid": "5377213541a3020810655ea2"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C11-基地形状", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655e9f"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C11-梯形", 
+                    "sname": "梯形"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea0"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C11-自由形", 
+                    "sname": "自由形"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea1"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C11-直角自由边", 
+                    "sname": "直角自由边"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377213541a3020810655ea7"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C12-自然要素", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea3"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C12-含湖", 
+                    "sname": "含湖"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea4"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C12-含河", 
+                    "sname": "含河"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea5"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C12-临河", 
+                    "sname": "临河"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea6"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C12-临海", 
+                    "sname": "临海"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377213541a3020810655eac"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C13-规模级别", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea8"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C13-大组团小区", 
+                    "sname": "大组团小区"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ea9"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C13-居住小区(多组团)", 
+                    "sname": "居住小区(多组团)"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eaa"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C13-小组团", 
+                    "sname": "小组团"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eab"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C13-大组团", 
+                    "sname": "大组团"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377213541a3020810655eb0"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C21-项目类型", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ead"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C21-高层", 
+                    "sname": "高层"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eae"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C21-复合型大盘", 
+                    "sname": "复合型大盘"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eaf"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C21-别墅区", 
+                    "sname": "别墅区"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e1f4241a302066b91a7b7"
+            }, 
+            "choose_type": true, 
+            "l_type": "select", 
+            "name": "C31-组团模式（可多选）", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb1"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-行列式", 
+                    "sname": "行列式"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb2"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-圆形", 
+                    "sname": "圆形"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb3"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-折线", 
+                    "sname": "折线"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb4"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-块状", 
+                    "sname": "块状"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb5"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-自由曲线", 
+                    "sname": "自由曲线"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb6"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C31-围合式", 
+                    "sname": "围合式"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e269541a302071796443d"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C31-组合模式", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb8"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-方块核心", 
+                    "sname": "方块核心"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eb9"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-序列", 
+                    "sname": "序列"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eba"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-方向旋转", 
+                    "sname": "方向旋转"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ebb"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-圆形核心", 
+                    "sname": "圆形核心"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ebc"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-方格网", 
+                    "sname": "方格网"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ebd"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C32-发散", 
+                    "sname": "发散"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e1f4241a302066b91a7b8"
+            }, 
+            "choose_type": true, 
+            "l_type": "select", 
+            "name": "C41-项目评价（可多选）", 
+            "search_able": true, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ebf"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C41-合理", 
+                    "sname": "合理"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec0"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C41-创意", 
+                    "sname": "创意"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec1"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C41-成功典范", 
+                    "sname": "成功典范"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec2"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C41-典范模块", 
+                    "sname": "典范模块"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "537e1f4241a302066b91a7b9"
+            }, 
+            "choose_type": true, 
+            "l_type": "select", 
+            "name": "C42-资料完整度（可多选）", 
+            "search_able": false, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec4"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-现状照片", 
+                    "sname": "现状照片"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec5"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-相关资料", 
+                    "sname": "相关资料"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec6"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-描图CAD", 
+                    "sname": "描图CAD"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec7"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-航拍", 
+                    "sname": "航拍"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec8"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-房型图", 
+                    "sname": "房型图"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ec9"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-规划总图", 
+                    "sname": "规划总图"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655eca"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C42-效果图或模型", 
+                    "sname": "效果图或模型"
+                }
+            ]
+        }, 
+        {
+            "_id": {
+                "$oid": "5377213541a3020810655ecf"
+            }, 
+            "choose_type": false, 
+            "l_type": "select", 
+            "name": "C43-进度类型", 
+            "search_able": false, 
+            "tagLst": [
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ecc"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C43-部分完成", 
+                    "sname": "部分完成"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ecd"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C43-完成待确认", 
+                    "sname": "完成待确认"
+                }, 
+                {
+                    "_id": {
+                        "$oid": "5377213541a3020810655ece"
+                    }, 
+                    "l_type": "select", 
+                    "name": "C43-已确认", 
+                    "sname": "已确认"
+                }
+            ]
+        }
+    ]
+}
