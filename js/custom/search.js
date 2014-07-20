@@ -1,90 +1,96 @@
 $(document).ready(function(){
-	$("#menu-item-admin").click(function(){
+  $(".sub-menu").hide();
+	$("#sub-menu-admin").show();
+	
+	$("#menu-item-admin").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-admin").show();
 	});
 	
-	$("#menu-item-functions").click(function(){
+	$("#menu-item-functions").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-functions").show();
 	});
 	
-	$("#menu-item-projects").click(function(){
+	$("#menu-item-projects").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-projects").show();
 	});
 	
-	$("#menu-item-building").click(function(){
+	$("#menu-item-building").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-building").show();
 	});
 	
-	$("#menu-item-internalview").click(function(){
+	$("#menu-item-internalview").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-internalview").show();
 	});
 	
-	$("#menu-item-builddetail").click(function(){
+	$("#menu-item-builddetail").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-builddetail").show();
 	});
 	
-	$("#menu-item-total").click(function(){
+	$("#menu-item-total").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-total").show();
 	});
 	
-	$("#menu-item-material").click(function(){
+	$("#menu-item-material").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-material").show();
 	});
 	
-	$("#menu-item-knowledge").click(function(){
+	$("#menu-item-knowledge").mouseover(function(){
+	  $("#active-main").removeAttr("class");
 		$(".sub-menu").hide();
 		$("#sub-menu-knowledge").show();
 	});
 	
-	$("#G06").click(function(){
-		$.ajax({
-			type: "post",
-			url: "category.json",
-			data: {category_id: $(this).attr("id")},
-			dataType: "json",
-			success: function(data) {
-				var range_label = data.rangeLabelLst;
-				$(range_label).each(function(index){
-					if (range_label[index].tagLst.length == 0) {
-						var inputs = "<div class='search-keyword col-sm-12'><div class='col-sm-2 " +
-							"keyword-label'><span>" + range_label[index].name.split("-")[1] +
-							":</span></div><div class='col-sm-10 kewords'><input class='keyword-input pull-left' id='" +
-							range_label[index].name.split("-")[0] + "' type='text' /></div></div>";
-						$(inputs).insertAfter($("#search-keyword"));
-					} else if (range_label[index].tagLst.length > 0) {
-						var inputs = "<div class='search-keyword col-sm-12'><div class='col-sm-2 " +
-							"keyword-label'><span>" + range_label[index].name.split("-")[1] +
-							":</span></div><div class='col-sm-10 kewords'>";
-						var tags = range_label[index].tagLst;
-
-						$(tags).each(function(idx){
-							inputs = inputs + "<span><a href='#' class='keyword' id='" +
-							          tags[idx].name.split("-")[0] +
-							          "'>" + tags[idx].sname + "</a></span>&nbsp;&nbsp;&nbsp;&nbsp;";
-						});
-						
-						inputs = inputs + "</div></div>";
-						$(inputs).insertAfter($("#search-keyword"));
-					}
-				});
-			},
-			error: function() {
-				alert("fail");
-			}
-		});
+	$(".sub-menu").mouseover(function(){
+	  $("#active-sub").removeAttr("class");
+	});
+	
+	var $container = $('#product-details').masonry({
+		//columnWidth: 5,
+		gutter: 51,
+		//isFitWidth: true,
+  		itemSelector: '.items'
+	});
+	// layout Masonry again after all images have loaded
+	$container.imagesLoaded( function() {
+  		$container.masonry();
 	});
 	
 	$(".keyword").click(function(){
 	  var search_item = $(this).attr("id");
-	  alert(search_item);
+	  var hints = $("#criteria-hints").html();
+	  $(this).addClass("criteria-hint");
+	  //$(this).css({"background-color": "rgb(0, 84, 168)","color": "#FFFFFF"});
+	  
+	  $("#criteria-hints").html(hints + "&nbsp;&nbsp;<span class='criteria-hint' id='" +
+	    search_item + "'>" + $("#" + search_item).text() +
+	    "&nbsp;<a href='#' class='remove-hint'><b>x</b></a>&nbsp;</span>");
+	  $("#remove-hints").show();
 	});
+	
+	$("#remove-hints").click(function(){
+	  $("#criteria-hints").html("你选择了：");
+	  $(".keyword").removeClass("criteria-hint");
+	  $(this).hide();
+	});
+	
+	$(".carousel").carousel();
+	
+	$(".item").colorbox({rel: 'item'});
 });
 
