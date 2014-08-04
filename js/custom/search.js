@@ -83,14 +83,61 @@ $(document).ready(function(){
 	  $("#remove-hints").show();
 	});
 	
-	$("#remove-hints").click(function(){
-	  $("#criteria-hints").html("你选择了：");
-	  $(".keyword").removeClass("criteria-hint");
-	  $(this).hide();
-	});
 	
 	$(".carousel").carousel();
 	
 	$(".item").colorbox({rel: 'item'});
 });
 
+
+function Map(){
+    this.obj = {};
+    this.count = 0;
+}
+Map.prototype.put = function(key, value){
+    var oldValue = this.obj[key];
+    if(oldValue == undefined){
+        this.count++;
+    }
+    this.obj[key] = value;
+    return oldValue;
+}
+Map.prototype.get = function(key){
+    return this.obj[key];
+}
+Map.prototype.remove = function(key){
+    var oldValue = this.obj[key];
+    if(oldValue != undefined){
+        this.count--;
+        delete this.obj[key];
+    }
+    return oldValue;
+}
+Map.prototype.size = function(){
+    return this.count;
+}
+function Set(getKey){
+    this.map = new Map();
+    this.getKey = getKey;
+}
+Set.prototype.add = function(value){
+    var key = this.getKey(value);
+    this.map.put(key, value);
+}
+Set.prototype.remove = function(value){
+    var key = this.getKey(value);
+    this.map.remove(key);
+}
+Set.prototype.getAll = function(){
+    tempArray=new Array();
+    for(var i in this.map.obj){
+        tempArray.push(i);
+    }
+    return tempArray;
+}
+Set.prototype.size = function(){
+    return this.map.size();
+}
+Set.prototype.removeAll = function(){
+    this.map = new Map();
+}
