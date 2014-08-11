@@ -479,6 +479,16 @@
       			</div>
       			
       			<div class="holder"></div>
+        				</div>
+        			</div>
+      			</div>
+      			
+      			<div class="col-sm-12" id="bbs">
+      				<h4>讨论</h4>
+      				<form action="/" method="POST">
+      					<textarea class="form-control" rows="6"></textarea>
+      				</form>
+      			</div>
         	</div>
         	
         	<!-- side area -->

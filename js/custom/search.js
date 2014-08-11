@@ -60,7 +60,7 @@ $(document).ready(function(){
 	  $("#active-sub").removeAttr("class");
 	});
 	
-	var $container = $('#product-details').masonry({
+	var $container = $('#itemContainer').masonry({
 		//columnWidth: 5,
 		gutter: 51,
 		//isFitWidth: true,
@@ -83,8 +83,25 @@ $(document).ready(function(){
 	  $("#remove-hints").show();
 	});
 	
+	$("#remove-hints").click(function(){
+    $("#criteria-hints").html("你选择了：");
+    $(".keyword").removeClass("criteria-hint");
+    $(this).hide();
+  }); 
 	
-	$(".carousel").carousel();
+	$(document).on("click", ".remove-hint", function(){
+	  var search_item_id = $(this).parent().attr("id");
+	  $(this).parent().remove();
+	  $("#" + search_item_id).removeClass("criteria-hint");
+	});
+	
+	$("div.holder").jPages({
+	  containerID : "itemContainer",
+	  previous: "前页",
+	  next: "后页",
+	  perPage: 12,
+	  delay: 100
+	});
 	
 	$(".item").colorbox({rel: 'item'});
 });
