@@ -71,7 +71,35 @@ $(document).ready(function(){
   		$container.masonry();
 	});
 	
-	$(".keyword").click(function(){
+	var tidSet = new Set(function(value) {return value;});
+	
+	$(document).on("click", ".keyword", function() {
+	   var search_item = $(this).attr("id");
+	   var hints = $("#criteria-hints").html();
+	   
+	   tidSet.add(search_item);
+	   $(this).addClass("criteria-hint");         
+	   $("#criteria-hints").html(hints + "&nbsp;&nbsp;<span class='criteria-hint' id='" +
+       search_item + "'>" + $(this).text() + "&nbsp;<a href='#' class='remove-hint'>" +
+       "<b>x</b></a>&nbsp;</span>");
+     $("#remove-hints").show();
+     $.ajax("{{ api_url }}case/" + code + "/?tags=" + tidSet.getAll().toString()).done(function(data) {
+         var cases = JSON.parse(data);
+         var innerHtml = "";
+         
+         for (i in cases.resultLst) {
+           innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
+           innerHtml +=  cases.resultLst[i].id;
+           innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
+           innerHtml += "'><img src='" + cases.resultLst[i].cover;
+           innerHtml += "' ></img></a></td></tr><tr><td><span>";
+           innerHtml += cases.resultLst[i].name;
+           innerHtml += "</span></td></tr></table></div>";
+         }
+         $("#itemContainer").empty().append(innerHtml);
+       });
+  });
+	/*$(".keyword").click(function(){
 	  var search_item = $(this).attr("id");
 	  var hints = $("#criteria-hints").html();
 	  $(this).addClass("criteria-hint");
@@ -81,18 +109,35 @@ $(document).ready(function(){
 	    search_item + "'>" + $("#" + search_item).text() +
 	    "&nbsp;<a href='#' class='remove-hint'><b>x</b></a>&nbsp;</span>");
 	  $("#remove-hints").show();
-	});
+	});*/
 	
 	$("#remove-hints").click(function(){
     $("#criteria-hints").html("你选择了：");
     $(".keyword").removeClass("criteria-hint");
     $(this).hide();
+    tidSet.removeAll();
   }); 
 	
 	$(document).on("click", ".remove-hint", function(){
 	  var search_item_id = $(this).parent().attr("id");
 	  $(this).parent().remove();
+	  tidSet.remove(search_item_id);
 	  $("#" + search_item_id).removeClass("criteria-hint");
+	  $.ajax("{{ api_url }}case/" + code + "/?tags=" + tidSet.getAll().toString()).done(function(data) {
+         var cases = JSON.parse(data);
+         var innerHtml = "";
+         
+         for (i in cases.resultLst) {
+           innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
+           innerHtml +=  cases.resultLst[i].id;
+           innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
+           innerHtml += "'><img src='" + cases.resultLst[i].cover;
+           innerHtml += "' ></img></a></td></tr><tr><td><span>";
+           innerHtml += cases.resultLst[i].name;
+           innerHtml += "</span></td></tr></table></div>";
+         }
+         $("#itemContainer").empty().append(innerHtml);
+       });
 	});
 	
 	$("div.holder").jPages({
