@@ -116,6 +116,7 @@ $(document).ready(function(){
     $(".keyword").removeClass("criteria-hint");
     $(this).hide();
     tidSet.removeAll();
+    $("#itemContainer").empty();
   }); 
 	
 	$(document).on("click", ".remove-hint", function(){

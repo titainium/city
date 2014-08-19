@@ -96,7 +96,7 @@ $(document).ready(function(){
            innerHtml += cases.resultLst[i].name;
            innerHtml += "</span></td></tr></table></div>";
          }
-         $("#product-details").empty().append(innerHtml);
+         $("#itemContainer").empty().append(innerHtml);
        });
   });
 	/*$(".keyword").click(function(){
@@ -136,7 +136,7 @@ $(document).ready(function(){
            innerHtml += cases.resultLst[i].name;
            innerHtml += "</span></td></tr></table></div>";
          }
-         $("#product-details").empty().append(innerHtml);
+         $("#itemContainer").empty().append(innerHtml);
        });
 	});
 	
