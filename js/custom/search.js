@@ -98,6 +98,9 @@ $(document).ready(function(){
                 innerHtml += "</span></td></tr></table></div>";
               }
               $("#itemContainer").empty().append(innerHtml);
+              $("#itemContainer").imagesLoaded( function() {
+            		$container.masonry();
+	            });
              }
             });
   });
