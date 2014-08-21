@@ -83,21 +83,23 @@ $(document).ready(function(){
        search_item + "'>" + $(this).text() + "&nbsp;<a href='#' class='remove-hint'>" +
        "<b>x</b></a>&nbsp;</span>");
      $("#remove-hints").show();
-     $.ajax("{{ api_url }}case/" + code + "/?tags=" + tidSet.getAll().toString()).done(function(data) {
-         var cases = JSON.parse(data);
-         var innerHtml = "";
+     $.ajax({url: "http://121.199.4.41:9000/api/case/C01/?tags=" + tidSet.getAll().toString(),
+             success: function(data){
+              var cases = JSON.parse(data);
+              var innerHtml = "";
          
-         for (i in cases.resultLst) {
-           innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
-           innerHtml +=  cases.resultLst[i].id;
-           innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
-           innerHtml += "'><img src='" + cases.resultLst[i].cover;
-           innerHtml += "' ></img></a></td></tr><tr><td><span>";
-           innerHtml += cases.resultLst[i].name;
-           innerHtml += "</span></td></tr></table></div>";
-         }
-         $("#itemContainer").empty().append(innerHtml);
-       });
+              for (i in cases.resultLst) {
+                innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
+                innerHtml +=  cases.resultLst[i].id;
+                innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
+                innerHtml += "'><img src='" + cases.resultLst[i].cover;
+                innerHtml += "' ></img></a></td></tr><tr><td><span>";
+                innerHtml += cases.resultLst[i].name;
+                innerHtml += "</span></td></tr></table></div>";
+              }
+              $("#itemContainer").empty().append(innerHtml);
+             }
+            });
   });
 	/*$(".keyword").click(function(){
 	  var search_item = $(this).attr("id");
@@ -124,21 +126,23 @@ $(document).ready(function(){
 	  $(this).parent().remove();
 	  tidSet.remove(search_item_id);
 	  $("#" + search_item_id).removeClass("criteria-hint");
-	  $.ajax("{{ api_url }}case/" + code + "/?tags=" + tidSet.getAll().toString()).done(function(data) {
-         var cases = JSON.parse(data);
-         var innerHtml = "";
+	  $.ajax({url: "http://121.199.4.41:9000/api/case/C01/?tags=" + tidSet.getAll().toString(),
+             success: function(data){
+              var cases = JSON.parse(data);
+              var innerHtml = "";
          
-         for (i in cases.resultLst) {
-           innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
-           innerHtml +=  cases.resultLst[i].id;
-           innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
-           innerHtml += "'><img src='" + cases.resultLst[i].cover;
-           innerHtml += "' ></img></a></td></tr><tr><td><span>";
-           innerHtml += cases.resultLst[i].name;
-           innerHtml += "</span></td></tr></table></div>";
-         }
-         $("#itemContainer").empty().append(innerHtml);
-       });
+              for (i in cases.resultLst) {
+                innerHtml += "<div class='items'><table><tr><td><a class='item' href='{{ product_url }}";
+                innerHtml +=  cases.resultLst[i].id;
+                innerHtml += "/' target='_blank' title='" + cases.resultLst[i].name;
+                innerHtml += "'><img src='" + cases.resultLst[i].cover;
+                innerHtml += "' ></img></a></td></tr><tr><td><span>";
+                innerHtml += cases.resultLst[i].name;
+                innerHtml += "</span></td></tr></table></div>";
+              }
+              $("#itemContainer").empty().append(innerHtml);
+             }
+            });
 	});
 	
 	$("div.holder").jPages({
