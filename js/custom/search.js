@@ -99,6 +99,9 @@ $(document).ready(function(){
               }
               
               $("#itemContainer").empty().append(innerHtml).masonry('reloadItems');
+              $("#itemContainer").imagesLoaded(function(){
+                $("#itemContainer").masonry();
+              });
              }
             });
   });
