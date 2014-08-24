@@ -97,10 +97,12 @@ $(document).ready(function(){
                 innerHtml += cases.resultLst[i].name;
                 innerHtml += "</span></td></tr></table></div>";
               }
+              
               $("#itemContainer").empty().append(innerHtml);
-              $("#itemContainer").imagesLoaded( function() {
-            		$("#itemContainer").masonry('appended', '.items');
-	            });
+              $("#itemContainer").masonry({
+                gutter: 51,
+                itemSelector: '.items'
+              });
              }
             });
   });

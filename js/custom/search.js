@@ -99,9 +99,13 @@ $(document).ready(function(){
               }
               
               $("#itemContainer").empty().append(innerHtml);
-              $("#itemContainer").masonry({
+              var newContainer = $("#itemContainer").masonry({
                 gutter: 51,
                 itemSelector: '.items'
+              });
+              
+              $newContainer.imagesLoaded(function(){
+                $newContainer.masonry();
               });
              }
             });
