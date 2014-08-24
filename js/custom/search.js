@@ -98,15 +98,7 @@ $(document).ready(function(){
                 innerHtml += "</span></td></tr></table></div>";
               }
               
-              $("#itemContainer").empty().append(innerHtml);
-              var newContainer = $("#itemContainer").masonry({
-                gutter: 51,
-                itemSelector: '.items'
-              });
-              
-              $newContainer.imagesLoaded(function(){
-                $newContainer.masonry();
-              });
+              $("#itemContainer").empty().append(innerHtml).masonry('reloadItems');
              }
             });
   });
