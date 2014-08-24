@@ -99,7 +99,7 @@ $(document).ready(function(){
               }
               $("#itemContainer").empty().append(innerHtml);
               $("#itemContainer").imagesLoaded( function() {
-            		$container.masonry();
+            		$("#itemContainer").masonry('appended', '.items');
 	            });
              }
             });
