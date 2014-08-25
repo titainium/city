@@ -60,7 +60,7 @@ $(document).ready(function(){
 	  $("#active-sub").removeAttr("class");
 	});
 	
-	var $container = $('#itemContainer').masonry({
+	/*var $container = $('#itemContainer').masonry({
 		//columnWidth: 5,
 		gutter: 51,
 		//isFitWidth: true,
@@ -69,7 +69,7 @@ $(document).ready(function(){
 	// layout Masonry again after all images have loaded
 	$container.imagesLoaded( function() {
   		$container.masonry();
-	});
+	});*/
 	
 	var tidSet = new Set(function(value) {return value;});
 	

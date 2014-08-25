@@ -77,7 +77,7 @@
 	margin-bottom: 5px;
 }
 
-.navigation-items {
+.navigation-items, .searchContainer {
   margin-left: -15px;
 }
 

@@ -280,8 +280,8 @@
       			
       			<div class="col-sm-12" id="itemContainer">
       				<table class="col-sm-12 searhContainer">
-      				 <tr>
-      				  <td>
+      				 <tr class="searchItems">
+      				  <td class="col-sm-4">
       				    <table>
           				  <tr>
             				  <td>
@@ -293,7 +293,7 @@
           					<tr><td><span>文件编码</span></td></tr>
       					  </table>
       					</td>
-      					<td>
+      					<td class="col-sm-4 searchItems">
       				    <table>
           				  <tr>
             				  <td>
@@ -305,7 +305,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        			  <td>
+        			  <td class="col-sm-4 searchItems">
       				    <table>
           				  <tr>
             				  <td>
@@ -319,7 +319,7 @@
         				</td>
         			<tr>
         			</tr>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -331,7 +331,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -343,7 +343,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        			  <td>
+        			  <td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -357,7 +357,7 @@
         				</td>
         			</tr>
         			<tr>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -369,7 +369,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -381,7 +381,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -395,7 +395,7 @@
         				</td>
         			</tr>
         			<tr>
-        			  <td>
+        			  <td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -407,7 +407,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>
@@ -419,7 +419,7 @@
           					<tr><td><span>文件编码</span></td></tr>
         					</table>
         				</td>
-        				<td>
+        				<td class="col-sm-4 searchItems">
         				  <table>
           				  <tr>
             				  <td>

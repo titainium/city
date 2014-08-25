@@ -83,7 +83,6 @@ $(document).ready(function(){
        search_item + "'>" + $(this).text() + "&nbsp;<a href='#' class='remove-hint'>" +
        "<b>x</b></a>&nbsp;</span>");
      $("#remove-hints").show();
-     $("#itemContainer").masonry('destroy');
      $.ajax({url: "http://121.199.4.41:9000/api/case/C01/?tags=" + tidSet.getAll().toString(),
              success: function(data){
               var cases = JSON.parse(data);
@@ -99,10 +98,10 @@ $(document).ready(function(){
                 innerHtml += "</span></td></tr></table></div>";
               }
               
-              var imgContainer = $("#itemContainer").empty().append(innerHtml);
-              var msnry = new Masonry.data(imgContainer);
-              
-              msnry.layout();
+              $("#itemContainer").empty().append(innerHtml).masonry('reloadItems');
+              $("#itemContainer").imagesLoaded(function(){
+                $("#itemContainer").masonry('appended', $(".items"));
+              });
              }
             });
   });

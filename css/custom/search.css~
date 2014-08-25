@@ -60,7 +60,7 @@
 	padding-right: 5px;
 }
 
-#product-details {
+#itemContainer {
 	margin-top: 15px;
 	margin-left: 0;
 	margin-right: 0;
@@ -77,8 +77,14 @@
 	margin-bottom: 5px;
 }
 
-.navigation-items {
+.navigation-items, .searchContainer {
   margin-left: -15px;
+}
+
+
+.searchItems {
+  margin-left: -30px;
+  /*margin-right: -30px;*/
 }
 
 .navigation-item {
