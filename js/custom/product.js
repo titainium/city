@@ -66,9 +66,12 @@ $(document).ready(function(){
 		//isFitWidth: true,
   		itemSelector: '.items'
 	});
+	
 	// layout Masonry again after all images have loaded
 	$container.imagesLoaded( function() {
-  		$container.masonry('appended', '.items', true);
+	  $container.masonry();
+	  $("#product-details").hide();
+  	$("#product-details").show(1000);
 	});
 	
 	$(".carousel").carousel();

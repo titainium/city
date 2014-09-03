@@ -60,15 +60,21 @@ $(document).ready(function(){
 	  $("#active-sub").removeAttr("class");
 	});
 	
+	
+	$("#product-details").hide();
+	
 	var $container = $('#product-details').masonry({
 		//columnWidth: 5,
 		gutter: 51,
 		//isFitWidth: true,
   		itemSelector: '.items'
 	});
+	
 	// layout Masonry again after all images have loaded
 	$container.imagesLoaded( function() {
-  		$container.masonry();
+	  $container.masonry( 'appended', '.items');
+	  
+  	$("#product-details").show(1000);
 	});
 	
 	$(".carousel").carousel();
